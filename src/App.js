@@ -1,4 +1,5 @@
 import React from 'react';
+import './styl.css';
 
 const App = () => {
   const [count, setCount] = React.useState(0);
@@ -11,6 +12,10 @@ const App = () => {
     setCount(state => state - 1);
   };
 
+  const handle2 = () => {
+    setCount(state => + 2);
+  }
+
   return (
     <div>
       Count: {count}
@@ -21,6 +26,9 @@ const App = () => {
         </button>
         <button type="button" onClick={handleDecrease}>
           Decrease
+        </button>
+        <button type="button" onClick={handle2}>
+          2
         </button>
       </div>
     </div>
